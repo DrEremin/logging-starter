@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.util.ContentCachingResponseWrapper;
 import ru.dreremin.loggingstarter.exclusion.EndpointExclusionFlagQualifier;
-import ru.dreremin.loggingstarter.exclusion.PropertiesCutterFromBody;
+import ru.dreremin.loggingstarter.util.PropertiesCutterFromBody;
 import ru.dreremin.loggingstarter.property.AppProperties;
 import ru.dreremin.loggingstarter.util.RequestDataFormatter;
 

@@ -1,4 +1,4 @@
-package ru.dreremin.loggingstarter.exclusion;
+package ru.dreremin.loggingstarter.util;
 
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;

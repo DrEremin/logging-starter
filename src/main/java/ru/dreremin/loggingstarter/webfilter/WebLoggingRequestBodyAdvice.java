@@ -12,7 +12,7 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.RequestBodyAdviceAdapter;
 import ru.dreremin.loggingstarter.exclusion.EndpointExclusionFlagQualifier;
-import ru.dreremin.loggingstarter.exclusion.PropertiesCutterFromBody;
+import ru.dreremin.loggingstarter.util.PropertiesCutterFromBody;
 import ru.dreremin.loggingstarter.property.AppProperties;
 import ru.dreremin.loggingstarter.util.RequestDataFormatter;
 
