@@ -32,7 +32,7 @@ public class LogExecutionAspect {
         try {
             return joinPoint.proceed();
         } finally {
-            log.info("Время выполнения метода {}: {}", method.getName(), System.currentTimeMillis() - start);
+            log.info("Время выполнения метода {}: {}", methodName, System.currentTimeMillis() - start);
         }
     }
 }

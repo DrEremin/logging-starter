@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.util.ContentCachingResponseWrapper;
 import ru.dreremin.loggingstarter.exclusion.EndpointExclusionFlagQualifier;
+import ru.dreremin.loggingstarter.exclusion.PropertiesCutterFromBody;
 import ru.dreremin.loggingstarter.property.AppProperties;
 import ru.dreremin.loggingstarter.util.RequestDataFormatter;
 
@@ -38,11 +39,14 @@ public class WebLoggingFilter extends HttpFilter {
         try {
             endpointExclusionFlagQualifier.setExclusionFlag(request.getRequestURI(), appProperties.getUriPaths());
             super.doFilter(request, responseWrapper, chain);
+
             if (endpointExclusionFlagQualifier.isNotExclusion()) {
                 if (method.equals("GET") || method.equals("DELETE")) {
                     log.info("Запрос: {} {} {}", method, requestURI, headers);
                 }
-                String responseBody = "body=" + new String(responseWrapper.getContentAsByteArray(), StandardCharsets.UTF_8);
+
+                String responseBody = new String(responseWrapper.getContentAsByteArray(), StandardCharsets.UTF_8);
+                responseBody = "body=" + PropertiesCutterFromBody.cutProperties(responseBody, appProperties.getBodyPaths());
                 log.info("Ответ: {} {} {} {}", method, requestURI, response.getStatus(), responseBody);
             }
         } finally {

@@ -12,6 +12,7 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.RequestBodyAdviceAdapter;
 import ru.dreremin.loggingstarter.exclusion.EndpointExclusionFlagQualifier;
+import ru.dreremin.loggingstarter.exclusion.PropertiesCutterFromBody;
 import ru.dreremin.loggingstarter.property.AppProperties;
 import ru.dreremin.loggingstarter.util.RequestDataFormatter;
 
@@ -50,14 +51,13 @@ public class WebLoggingRequestBodyAdvice extends RequestBodyAdviceAdapter {
         String method = request.getMethod();
         String requestURI = RequestDataFormatter.formatRequestUriWithQueryParams(request);
         String headers = RequestDataFormatter.formatRequestHeaders(request, appProperties.getHeaders());
-        String jsonBody = "body=";
 
         try {
-            jsonBody += objectMapper.writeValueAsString(body);
+            String jsonBody = objectMapper.writeValueAsString(body);
+            jsonBody = "body=" + PropertiesCutterFromBody.cutProperties(jsonBody, appProperties.getBodyPaths());
+            log.info("Запрос: {} {} {} {}", method, requestURI, headers, jsonBody);
         } catch (JsonProcessingException ignored) {
         }
-
-        log.info("Запрос: {} {} {} {}", method, requestURI, headers, jsonBody);
 
         return super.afterBodyRead(body, inputMessage, parameter, targetType, converterType);
     }
