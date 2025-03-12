@@ -8,13 +8,13 @@ import java.util.Set;
 import java.util.HashSet;
 
 @ConfigurationProperties(prefix = "logging.exclusion")
-public class AppProperties {
+public class LoggingStarterProperties {
 
     private Set<String> headers;
     private List<String> bodyPaths;
     private List<String> uriPaths;
 
-    public AppProperties() {
+    public LoggingStarterProperties() {
         this.headers = new HashSet<>();
         this.bodyPaths = new ArrayList<>();
         this.uriPaths = new ArrayList<>();
