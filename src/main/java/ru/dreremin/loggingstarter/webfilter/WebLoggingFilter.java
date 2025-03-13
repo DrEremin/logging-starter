@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.util.ContentCachingResponseWrapper;
 import ru.dreremin.loggingstarter.property.LoggingStarterProperties;
-import ru.dreremin.loggingstarter.util.JsonBodyPropertiesMasker;
+import ru.dreremin.loggingstarter.masking.JsonBodyPropertiesMasker;
 import ru.dreremin.loggingstarter.util.RequestDataFormatter;
 import ru.dreremin.loggingstarter.util.URIPathMatcherWithPathPatterns;
 
@@ -23,6 +23,9 @@ public class WebLoggingFilter extends HttpFilter {
 
     @Autowired
     private LoggingStarterProperties loggingStarterProperties;
+
+    @Autowired
+    private JsonBodyPropertiesMasker masker;
 
     @Override
     protected void doFilter(HttpServletRequest request,
@@ -37,14 +40,15 @@ public class WebLoggingFilter extends HttpFilter {
             super.doFilter(request, responseWrapper, chain);
 
             if (!URIPathMatcherWithPathPatterns.matchAny(request.getRequestURI(), loggingStarterProperties.getUriPaths())) {
-                if (method.equals("GET") || method.equals("DELETE")) {
+                if (request.getContentLength() == -1) {
                     log.info("Запрос: {} {} {}", method, requestURI, headers);
                 }
 
                 String responseBody = new String(responseWrapper.getContentAsByteArray(), StandardCharsets.UTF_8);
-                log.info("Обработка тела ответа...");
-                responseBody = JsonBodyPropertiesMasker.maskProperties(responseBody, loggingStarterProperties.getBodyPaths());
-                log.info("Ответ: {} {} {} {}", method, requestURI, response.getStatus(), "body=" + responseBody);
+                responseBody = masker.maskProperties(responseBody, loggingStarterProperties.getBodyPaths())
+                        .map(s -> "body=" + s)
+                        .orElse("");
+                log.info("Ответ: {} {} {} {}", method, requestURI, response.getStatus(), responseBody);
             }
         } finally {
             responseWrapper.copyBodyToResponse();

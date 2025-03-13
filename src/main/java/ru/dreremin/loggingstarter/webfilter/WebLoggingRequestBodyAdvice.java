@@ -1,6 +1,5 @@
 package ru.dreremin.loggingstarter.webfilter;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +10,7 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.RequestBodyAdviceAdapter;
 import ru.dreremin.loggingstarter.util.URIPathMatcherWithPathPatterns;
-import ru.dreremin.loggingstarter.util.JsonBodyPropertiesMasker;
+import ru.dreremin.loggingstarter.masking.JsonBodyPropertiesMasker;
 import ru.dreremin.loggingstarter.property.LoggingStarterProperties;
 import ru.dreremin.loggingstarter.util.RequestDataFormatter;
 
@@ -26,10 +25,10 @@ public class WebLoggingRequestBodyAdvice extends RequestBodyAdviceAdapter {
     private HttpServletRequest request;
 
     @Autowired
-    private ObjectMapper objectMapper;
+    private LoggingStarterProperties loggingStarterProperties;
 
     @Autowired
-    private LoggingStarterProperties loggingStarterProperties;
+    private JsonBodyPropertiesMasker masker;
 
     @Override
     public boolean supports(MethodParameter methodParameter,
@@ -47,9 +46,10 @@ public class WebLoggingRequestBodyAdvice extends RequestBodyAdviceAdapter {
         String method = request.getMethod();
         String requestURI = RequestDataFormatter.formatRequestUriWithQueryParams(request);
         String headers = RequestDataFormatter.formatRequestHeaders(request, loggingStarterProperties.getHeaders());
-        log.info("Обработка тела запроса...");
-        String jsonBody = JsonBodyPropertiesMasker.maskProperties(body, loggingStarterProperties.getBodyPaths());
-        log.info("Запрос: {} {} {} {}", method, requestURI, headers, "body=" + jsonBody);
+        String jsonBody = masker.maskProperties(body, loggingStarterProperties.getBodyPaths())
+                .map(s -> "body=" + s)
+                .orElse("");
+        log.info("Запрос: {} {} {} {}", method, requestURI, headers, jsonBody);
 
         return super.afterBodyRead(body, inputMessage, parameter, targetType, converterType);
     }

@@ -4,6 +4,7 @@ import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import ru.dreremin.loggingstarter.aspect.LogExecutionAspect;
+import ru.dreremin.loggingstarter.masking.JsonBodyPropertiesMasker;
 import ru.dreremin.loggingstarter.property.LoggingStarterProperties;
 import ru.dreremin.loggingstarter.webfilter.WebLoggingFilter;
 import ru.dreremin.loggingstarter.webfilter.WebLoggingRequestBodyAdvice;
@@ -33,5 +34,10 @@ public class LoggingStarterAutoConfiguration {
     @Bean
     public LoggingStarterProperties loggingStarterProperties() {
         return new LoggingStarterProperties();
+    }
+
+    @Bean
+    public JsonBodyPropertiesMasker jsonBodyPropertiesMasker() {
+        return new JsonBodyPropertiesMasker();
     }
 }
