@@ -29,7 +29,7 @@ public class JsonBodyPropertiesMasker {
 
         String bodyString = body.getClass() != String.class ? convertObjectToJsonString(body) : (String) body;
 
-        if (StringUtils.hasText(bodyString)) {
+        if (!StringUtils.hasText(bodyString)) {
             return newBodyOptional;
         }
 
