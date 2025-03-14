@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ru.dreremin</groupId>
   <artifactId>logging-starter</artifactId>
-  <version>1.6-SNAPSHOT</version>
+  <version>1.7-SNAPSHOT</version>
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
