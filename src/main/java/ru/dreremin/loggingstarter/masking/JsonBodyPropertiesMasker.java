@@ -29,7 +29,7 @@ public class JsonBodyPropertiesMasker {
 
         String bodyString = body.getClass() != String.class ? convertObjectToJsonString(body) : (String) body;
 
-        if (bodyString.isEmpty()) {
+        if (StringUtils.hasText(bodyString)) {
             return newBodyOptional;
         }
 
@@ -53,7 +53,7 @@ public class JsonBodyPropertiesMasker {
     }
 
     private String convertObjectToJsonString(Object obj) {
-        String jsonString = "";
+        String jsonString = null;
 
         try {
             jsonString = objectMapper.writeValueAsString(obj);
