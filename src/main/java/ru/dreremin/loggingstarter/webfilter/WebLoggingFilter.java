@@ -33,19 +33,23 @@ public class WebLoggingFilter extends HttpFilter {
                             FilterChain chain) throws IOException, ServletException {
         String method = request.getMethod();
         String requestURI = RequestDataFormatter.formatRequestUriWithQueryParams(request);
+        String headers = RequestDataFormatter.formatRequestHeaders(request, loggingStarterProperties.getHeaders());
         ContentCachingResponseWrapper responseWrapper = new ContentCachingResponseWrapper(response);
 
         try {
             super.doFilter(request, responseWrapper, chain);
 
             if (!URIPathMatcherWithPathPatterns.matchAny(request.getRequestURI(), loggingStarterProperties.getUriPaths())) {
+                if (request.getContentLength() == -1) {
+                    log.info("Запрос: {} {} {}", method, requestURI, headers);
+                }
+
                 String responseBody = new String(responseWrapper.getContentAsByteArray(), StandardCharsets.UTF_8);
                 responseBody = masker.maskProperties(responseBody, loggingStarterProperties.getBodyPaths())
                         .map(s -> "body=" + s)
                         .orElse("");
                 log.info("Ответ: {} {} {} {}", method, requestURI, response.getStatus(), responseBody);
             }
-
         } finally {
             responseWrapper.copyBodyToResponse();
         }
