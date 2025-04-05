@@ -1,11 +1,10 @@
 package ru.dreremin.loggingstarter.util;
 
+import feign.Request;
 import jakarta.servlet.http.HttpServletRequest;
 import org.apache.logging.log4j.util.Strings;
 
-import java.util.Collections;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class RequestDataFormatter {
@@ -18,6 +17,16 @@ public class RequestDataFormatter {
         String inlineHeaders = Collections.list(request.getHeaderNames()).stream()
                 .filter(it -> !excludedHeaders.contains(it))
                 .map(it -> "%s=%s".formatted(it, request.getHeader(it)))
+                .collect(Collectors.joining(","));
+
+        return "headers={%s}".formatted(inlineHeaders);
+    }
+
+    public static String formatFeignRequestHeaders(Request request, Set<String> excludedHeaders) {
+        Map<String, Collection<String>> headers = request.headers();
+        String inlineHeaders = headers.keySet().stream()
+                .filter(it -> !excludedHeaders.contains(it))
+                .map(it -> "%s=%s".formatted(it, headers.get(it)))
                 .collect(Collectors.joining(","));
 
         return "headers={%s}".formatted(inlineHeaders);
