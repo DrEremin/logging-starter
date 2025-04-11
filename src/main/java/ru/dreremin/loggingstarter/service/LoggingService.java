@@ -28,7 +28,7 @@ public class LoggingService {
 
     public void logRequest(HttpServletRequest request) {
         RequestData requestData = RequestData.builder()
-                .direction(RequestDirection.IN)
+                .direction(RequestDirection.IN.name())
                 .method(request.getMethod())
                 .uri(RequestDataFormatter.formatRequestUriWithQueryParams(request))
                 .headers(RequestDataFormatter.formatRequestHeaders(request, properties.getHeaders()))
@@ -39,7 +39,7 @@ public class LoggingService {
 
     public void logRequestBody(HttpServletRequest request, Object body) {
         RequestData requestData = RequestData.builder()
-                .direction(RequestDirection.IN)
+                .direction(RequestDirection.IN.name())
                 .method(request.getMethod())
                 .uri(RequestDataFormatter.formatRequestUriWithQueryParams(request))
                 .headers(RequestDataFormatter.formatRequestHeaders(request, properties.getHeaders()))
@@ -53,7 +53,7 @@ public class LoggingService {
         byte[] bodyData = request.body();
         String requestBody = bodyData != null ? new String(bodyData, StandardCharsets.UTF_8) : "";
         RequestData requestData = RequestData.builder()
-                .direction(RequestDirection.OUT)
+                .direction(RequestDirection.OUT.name())
                 .method(request.httpMethod().name())
                 .uri(request.url())
                 .headers(RequestDataFormatter.formatFeignRequestHeaders(request, properties.getHeaders()))
@@ -66,10 +66,10 @@ public class LoggingService {
     public void logResponse(HttpServletRequest request, ContentCachingResponseWrapper responseWrapper) {
         String responseBody = new String(responseWrapper.getContentAsByteArray(), StandardCharsets.UTF_8);
         ResponseData responseData = ResponseData.builder()
-                .direction(RequestDirection.IN)
+                .direction(RequestDirection.IN.name())
                 .method(request.getMethod())
                 .uri(RequestDataFormatter.formatRequestUriWithQueryParams(request))
-                .status(responseWrapper.getStatus())
+                .status(String.valueOf(responseWrapper.getStatus()))
                 .body(prepareBody(responseBody))
                 .build();
 
@@ -78,10 +78,10 @@ public class LoggingService {
 
     public void logFeignResponse(Response response, String responseBody) {
         ResponseData responseData = ResponseData.builder()
-                .direction(RequestDirection.OUT)
+                .direction(RequestDirection.OUT.name())
                 .method(response.request().httpMethod().name())
                 .uri(response.request().url())
-                .status(response.status())
+                .status(String.valueOf(response.status()))
                 .body(prepareBody(responseBody))
                 .build();
 
