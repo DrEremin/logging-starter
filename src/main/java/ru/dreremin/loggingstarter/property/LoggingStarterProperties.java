@@ -1,6 +1,5 @@
 package ru.dreremin.loggingstarter.property;
 
-import jakarta.annotation.PostConstruct;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.*;
@@ -8,7 +7,7 @@ import java.util.*;
 @ConfigurationProperties(prefix = "logging.exclusion")
 public class LoggingStarterProperties {
 
-    private Set<String> headers;
+    private List<String> headers;
     private List<String> bodyPaths;
     private List<String> uriPaths;
 
@@ -17,24 +16,11 @@ public class LoggingStarterProperties {
         this.uriPaths = new ArrayList<>();
     }
 
-    @PostConstruct
-    public void init() {
-        Set<String> headersLowerCase = new HashSet<>();
-
-        if (headers != null) {
-            for (String header : headers) {
-                headersLowerCase.add(header.toLowerCase());
-            }
-        }
-
-        headers = headersLowerCase;
-    }
-
-    public Set<String> getHeaders() {
+    public List<String> getHeaders() {
         return headers;
     }
 
-    public void setHeaders(Set<String> headers) {
+    public void setHeaders(List<String> headers) {
         this.headers = headers;
     }
 

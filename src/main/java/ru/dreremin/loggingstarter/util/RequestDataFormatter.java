@@ -13,19 +13,21 @@ public class RequestDataFormatter {
         return request.getRequestURI() + formattedQueryString(request);
     }
 
-    public static String formatRequestHeaders(HttpServletRequest request, Set<String> excludedHeaders) {
+    public static String formatRequestHeaders(HttpServletRequest request, List<String> excludedHeaders) {
         String inlineHeaders = Collections.list(request.getHeaderNames()).stream()
-                .filter(it -> !excludedHeaders.contains(it.toLowerCase()))
+                .filter(header -> excludedHeaders.stream()
+                        .noneMatch(excludedHeader -> excludedHeader.equalsIgnoreCase(header)))
                 .map(it -> "%s=%s".formatted(it, request.getHeader(it)))
                 .collect(Collectors.joining(","));
 
         return "headers={%s}".formatted(inlineHeaders);
     }
 
-    public static String formatFeignRequestHeaders(Request request, Set<String> excludedHeaders) {
+    public static String formatFeignRequestHeaders(Request request, List<String> excludedHeaders) {
         Map<String, Collection<String>> headers = request.headers();
         String inlineHeaders = headers.keySet().stream()
-                .filter(it -> !excludedHeaders.contains(it.toLowerCase()))
+                .filter(header -> excludedHeaders.stream()
+                        .noneMatch(excludedHeader -> excludedHeader.equalsIgnoreCase(header)))
                 .map(it -> "%s=%s".formatted(it, headers.get(it)))
                 .collect(Collectors.joining(","));
 
