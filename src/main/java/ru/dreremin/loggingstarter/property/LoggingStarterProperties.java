@@ -1,20 +1,17 @@
 package ru.dreremin.loggingstarter.property;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.*;
 
+@ConditionalOnProperty(prefix = "logging.exclusion", value = "enabled", havingValue = "true")
 @ConfigurationProperties(prefix = "logging.exclusion")
 public class LoggingStarterProperties {
 
-    private List<String> headers;
-    private List<String> bodyPaths;
-    private List<String> uriPaths;
-
-    public LoggingStarterProperties() {
-        this.bodyPaths = new ArrayList<>();
-        this.uriPaths = new ArrayList<>();
-    }
+    private List<String> headers = new ArrayList<>();
+    private List<String> bodyPaths = new ArrayList<>();
+    private List<String> uriPaths = new ArrayList<>();
 
     public List<String> getHeaders() {
         return headers;
