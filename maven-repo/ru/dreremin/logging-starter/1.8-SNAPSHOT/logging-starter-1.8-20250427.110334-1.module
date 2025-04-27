@@ -3,7 +3,7 @@
   "component": {
     "group": "ru.dreremin",
     "module": "logging-starter",
-    "version": "1.7-SNAPSHOT",
+    "version": "1.8-SNAPSHOT",
     "attributes": {
       "org.gradle.status": "integration"
     }
@@ -25,13 +25,13 @@
       },
       "files": [
         {
-          "name": "logging-starter-1.7-SNAPSHOT.jar",
-          "url": "logging-starter-1.7-SNAPSHOT.jar",
-          "size": 15106,
-          "sha512": "9356232fdf5e17d42a25e72d8cac0990f1d214309e84afd7fc492387c45bcded8cec9ce804dadccf99bb51b312c5c14a0d92dec8861610209706d096b653543e",
-          "sha256": "8d84fa748462ff64294d8150c525081195ce186b6f5d32612c80ff39a0e355dc",
-          "sha1": "3e38e2804baa5cf36ff08be8edc15e08c4959a54",
-          "md5": "9c0fbc51cb13ed634843e566f8fbb551"
+          "name": "logging-starter-1.8-SNAPSHOT.jar",
+          "url": "logging-starter-1.8-SNAPSHOT.jar",
+          "size": 22001,
+          "sha512": "8812de5287e10c84ab47d7e28b428f178d6fa4b65c210f5e5fea0c4b207f10b58c8ce94db0e4ee1a4c14d57bcde853495316e92cc0363eb6812034c669da78e5",
+          "sha256": "8d4b75e5f007abe789e82dd0155aa4bf311c1aed597ebfadfc802c21bce67dda",
+          "sha1": "77066b57f86f3e5abd8aa59832d81afbdce7a8e7",
+          "md5": "50836073606f20ec5219b72896caa53e"
         }
       ]
     },
@@ -60,6 +60,13 @@
           }
         },
         {
+          "group": "org.springframework.cloud",
+          "module": "spring-cloud-starter-openfeign",
+          "version": {
+            "requires": "4.1.4"
+          }
+        },
+        {
           "group": "com.jayway.jsonpath",
           "module": "json-path",
           "version": {
@@ -69,13 +76,13 @@
       ],
       "files": [
         {
-          "name": "logging-starter-1.7-SNAPSHOT.jar",
-          "url": "logging-starter-1.7-SNAPSHOT.jar",
-          "size": 15106,
-          "sha512": "9356232fdf5e17d42a25e72d8cac0990f1d214309e84afd7fc492387c45bcded8cec9ce804dadccf99bb51b312c5c14a0d92dec8861610209706d096b653543e",
-          "sha256": "8d84fa748462ff64294d8150c525081195ce186b6f5d32612c80ff39a0e355dc",
-          "sha1": "3e38e2804baa5cf36ff08be8edc15e08c4959a54",
-          "md5": "9c0fbc51cb13ed634843e566f8fbb551"
+          "name": "logging-starter-1.8-SNAPSHOT.jar",
+          "url": "logging-starter-1.8-SNAPSHOT.jar",
+          "size": 22001,
+          "sha512": "8812de5287e10c84ab47d7e28b428f178d6fa4b65c210f5e5fea0c4b207f10b58c8ce94db0e4ee1a4c14d57bcde853495316e92cc0363eb6812034c669da78e5",
+          "sha256": "8d4b75e5f007abe789e82dd0155aa4bf311c1aed597ebfadfc802c21bce67dda",
+          "sha1": "77066b57f86f3e5abd8aa59832d81afbdce7a8e7",
+          "md5": "50836073606f20ec5219b72896caa53e"
         }
       ]
     }

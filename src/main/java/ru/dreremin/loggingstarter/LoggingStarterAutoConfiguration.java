@@ -1,11 +1,14 @@
 package ru.dreremin.loggingstarter;
 
+import feign.Logger;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import ru.dreremin.loggingstarter.aspect.LogExecutionAspect;
+import ru.dreremin.loggingstarter.feign.FeignLogger;
 import ru.dreremin.loggingstarter.masking.JsonBodyPropertiesMasker;
 import ru.dreremin.loggingstarter.property.LoggingStarterProperties;
+import ru.dreremin.loggingstarter.service.LoggingService;
 import ru.dreremin.loggingstarter.webfilter.WebLoggingFilter;
 import ru.dreremin.loggingstarter.webfilter.WebLoggingRequestBodyAdvice;
 
@@ -26,7 +29,7 @@ public class LoggingStarterAutoConfiguration {
     }
 
     @Bean
-    @ConditionalOnProperty(prefix = "logging.web-logging", value = {"enabled", "log-body"}, havingValue = "true")
+    @ConditionalOnProperty(prefix = "logging.web-logging", value = {"enabled"}, havingValue = "true")
     public WebLoggingRequestBodyAdvice loggingRequestBodyAdvice() {
         return new WebLoggingRequestBodyAdvice();
     }
@@ -39,5 +42,22 @@ public class LoggingStarterAutoConfiguration {
     @Bean
     public JsonBodyPropertiesMasker jsonBodyPropertiesMasker() {
         return new JsonBodyPropertiesMasker();
+    }
+
+    @Bean
+    public LoggingService loggingService() {
+        return new LoggingService();
+    }
+
+    @Bean
+    @ConditionalOnProperty(prefix = "logging.web-logging", value = "log-feign-requests", havingValue = "true")
+    public FeignLogger feignLogger() {
+        return new FeignLogger();
+    }
+
+    @Bean
+    @ConditionalOnProperty(prefix = "logging.web-logging", value = "log-feign-requests", havingValue = "true")
+    public Logger.Level feignLoggerLevel() {
+        return Logger.Level.BASIC;
     }
 }

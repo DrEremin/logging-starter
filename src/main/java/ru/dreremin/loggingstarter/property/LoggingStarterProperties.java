@@ -2,29 +2,25 @@ package ru.dreremin.loggingstarter.property;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.HashSet;
+import java.util.*;
 
 @ConfigurationProperties(prefix = "logging.exclusion")
 public class LoggingStarterProperties {
 
-    private Set<String> headers;
+    private List<String> headers;
     private List<String> bodyPaths;
     private List<String> uriPaths;
 
     public LoggingStarterProperties() {
-        this.headers = new HashSet<>();
         this.bodyPaths = new ArrayList<>();
         this.uriPaths = new ArrayList<>();
     }
 
-    public Set<String> getHeaders() {
+    public List<String> getHeaders() {
         return headers;
     }
 
-    public void setHeaders(Set<String> headers) {
+    public void setHeaders(List<String> headers) {
         this.headers = headers;
     }
 
