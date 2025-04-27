@@ -3,28 +3,28 @@
   <groupId>ru.dreremin</groupId>
   <artifactId>logging-starter</artifactId>
   <versioning>
-    <lastUpdated>20250314170354</lastUpdated>
+    <lastUpdated>20250427110334</lastUpdated>
     <snapshot>
-      <timestamp>20250314.170354</timestamp>
+      <timestamp>20250427.110334</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
         <extension>module</extension>
-        <value>1.7-20250314.170354-1</value>
-        <updated>20250314170354</updated>
-      </snapshotVersion>
-      <snapshotVersion>
-        <extension>pom</extension>
-        <value>1.7-20250314.170354-1</value>
-        <updated>20250314170354</updated>
+        <value>1.8-20250427.110334-1</value>
+        <updated>20250427110334</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.7-20250314.170354-1</value>
-        <updated>20250314170354</updated>
+        <value>1.8-20250427.110334-1</value>
+        <updated>20250427110334</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.8-20250427.110334-1</value>
+        <updated>20250427110334</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
-  <version>1.7-SNAPSHOT</version>
+  <version>1.8-SNAPSHOT</version>
 </metadata>
