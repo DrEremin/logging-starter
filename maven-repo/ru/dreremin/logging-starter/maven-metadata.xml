@@ -3,10 +3,10 @@
   <groupId>ru.dreremin</groupId>
   <artifactId>logging-starter</artifactId>
   <versioning>
-    <latest>1.8-SNAPSHOT</latest>
+    <latest>1.9-SNAPSHOT</latest>
     <versions>
-      <version>1.8-SNAPSHOT</version>
+      <version>1.9-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20250427212931</lastUpdated>
+    <lastUpdated>20250428053937</lastUpdated>
   </versioning>
 </metadata>

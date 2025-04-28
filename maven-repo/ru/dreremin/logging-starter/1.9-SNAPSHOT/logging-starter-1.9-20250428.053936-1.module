@@ -3,7 +3,7 @@
   "component": {
     "group": "ru.dreremin",
     "module": "logging-starter",
-    "version": "1.8-SNAPSHOT",
+    "version": "1.9-SNAPSHOT",
     "attributes": {
       "org.gradle.status": "integration"
     }
@@ -25,13 +25,13 @@
       },
       "files": [
         {
-          "name": "logging-starter-1.8-SNAPSHOT.jar",
-          "url": "logging-starter-1.8-SNAPSHOT.jar",
+          "name": "logging-starter-1.9-SNAPSHOT.jar",
+          "url": "logging-starter-1.9-SNAPSHOT.jar",
           "size": 22069,
-          "sha512": "a0bb4056dd65fd76d5c2261ae4bece2675fd6c53586b52dd888a7d59538e8310896e623802aa69bc20b4b613de5e60f02263b0e208e4f568a2ce1b54041a9149",
-          "sha256": "ee48fd77532a8f24bde0afc58103ae5253b0b76087a2d6d7bdc0d737c05307e6",
-          "sha1": "3f6be0644bf0351e5e1a831615a8b24ef80e6757",
-          "md5": "ecbdd69dfe64bc09263237305aed273b"
+          "sha512": "dc7275009de9d27c1b5d7d958334e4080828dc481db375f5a6ecb5b52344f95d6d7aa6a0e73d5be9ebc5c4c53bf87dba9dcf403e15d40770124ce9631129eb7a",
+          "sha256": "6f15748fb8b1bf0169b3daa05b4cea0b7a78bfa257c9c9c03a8822baeb75347c",
+          "sha1": "ef6922ebeeb823859383cd5a3d64f80a9aa22653",
+          "md5": "428709da7f3f9b9dc6088cf5498d1195"
         }
       ]
     },
@@ -76,13 +76,13 @@
       ],
       "files": [
         {
-          "name": "logging-starter-1.8-SNAPSHOT.jar",
-          "url": "logging-starter-1.8-SNAPSHOT.jar",
+          "name": "logging-starter-1.9-SNAPSHOT.jar",
+          "url": "logging-starter-1.9-SNAPSHOT.jar",
           "size": 22069,
-          "sha512": "a0bb4056dd65fd76d5c2261ae4bece2675fd6c53586b52dd888a7d59538e8310896e623802aa69bc20b4b613de5e60f02263b0e208e4f568a2ce1b54041a9149",
-          "sha256": "ee48fd77532a8f24bde0afc58103ae5253b0b76087a2d6d7bdc0d737c05307e6",
-          "sha1": "3f6be0644bf0351e5e1a831615a8b24ef80e6757",
-          "md5": "ecbdd69dfe64bc09263237305aed273b"
+          "sha512": "dc7275009de9d27c1b5d7d958334e4080828dc481db375f5a6ecb5b52344f95d6d7aa6a0e73d5be9ebc5c4c53bf87dba9dcf403e15d40770124ce9631129eb7a",
+          "sha256": "6f15748fb8b1bf0169b3daa05b4cea0b7a78bfa257c9c9c03a8822baeb75347c",
+          "sha1": "ef6922ebeeb823859383cd5a3d64f80a9aa22653",
+          "md5": "428709da7f3f9b9dc6088cf5498d1195"
         }
       ]
     }
