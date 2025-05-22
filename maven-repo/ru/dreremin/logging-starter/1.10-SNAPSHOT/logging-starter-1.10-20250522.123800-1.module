@@ -3,7 +3,7 @@
   "component": {
     "group": "ru.dreremin",
     "module": "logging-starter",
-    "version": "1.9-SNAPSHOT",
+    "version": "1.10-SNAPSHOT",
     "attributes": {
       "org.gradle.status": "integration"
     }
@@ -25,13 +25,13 @@
       },
       "files": [
         {
-          "name": "logging-starter-1.9-SNAPSHOT.jar",
-          "url": "logging-starter-1.9-SNAPSHOT.jar",
-          "size": 22069,
-          "sha512": "dc7275009de9d27c1b5d7d958334e4080828dc481db375f5a6ecb5b52344f95d6d7aa6a0e73d5be9ebc5c4c53bf87dba9dcf403e15d40770124ce9631129eb7a",
-          "sha256": "6f15748fb8b1bf0169b3daa05b4cea0b7a78bfa257c9c9c03a8822baeb75347c",
-          "sha1": "ef6922ebeeb823859383cd5a3d64f80a9aa22653",
-          "md5": "428709da7f3f9b9dc6088cf5498d1195"
+          "name": "logging-starter-1.10-SNAPSHOT.jar",
+          "url": "logging-starter-1.10-SNAPSHOT.jar",
+          "size": 23078,
+          "sha512": "87affe33c871bdcdb877c5a3ff222361bbe0b43aca4c3ec2e8b54a9fa1a3652e50e62ebbc373ca5b837e10d1463f605f68e874c6e255f66ff34913670f6354f4",
+          "sha256": "016a501495696ccacf3afd9630426c45a9b828ee043c32bd1d41a288d369113a",
+          "sha1": "40dad07fba7969cfbc9841a2c6cacec9aea44414",
+          "md5": "5605125338d8941b2dbff40c0c93323a"
         }
       ]
     },
@@ -72,17 +72,24 @@
           "version": {
             "requires": "2.9.0"
           }
+        },
+        {
+          "group": "org.codehaus.janino",
+          "module": "janino",
+          "version": {
+            "requires": "3.1.12"
+          }
         }
       ],
       "files": [
         {
-          "name": "logging-starter-1.9-SNAPSHOT.jar",
-          "url": "logging-starter-1.9-SNAPSHOT.jar",
-          "size": 22069,
-          "sha512": "dc7275009de9d27c1b5d7d958334e4080828dc481db375f5a6ecb5b52344f95d6d7aa6a0e73d5be9ebc5c4c53bf87dba9dcf403e15d40770124ce9631129eb7a",
-          "sha256": "6f15748fb8b1bf0169b3daa05b4cea0b7a78bfa257c9c9c03a8822baeb75347c",
-          "sha1": "ef6922ebeeb823859383cd5a3d64f80a9aa22653",
-          "md5": "428709da7f3f9b9dc6088cf5498d1195"
+          "name": "logging-starter-1.10-SNAPSHOT.jar",
+          "url": "logging-starter-1.10-SNAPSHOT.jar",
+          "size": 23078,
+          "sha512": "87affe33c871bdcdb877c5a3ff222361bbe0b43aca4c3ec2e8b54a9fa1a3652e50e62ebbc373ca5b837e10d1463f605f68e874c6e255f66ff34913670f6354f4",
+          "sha256": "016a501495696ccacf3afd9630426c45a9b828ee043c32bd1d41a288d369113a",
+          "sha1": "40dad07fba7969cfbc9841a2c6cacec9aea44414",
+          "md5": "5605125338d8941b2dbff40c0c93323a"
         }
       ]
     }
