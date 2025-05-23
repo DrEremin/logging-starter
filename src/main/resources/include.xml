@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<configuration>
+<included>
 
     <springProperty name="CONSOLE_ENABLED" source="logging.console.enabled" defaultValue="true"/>
     <springProperty name="FILE_ENABLED" source="logging.file.enabled" defaultValue="false"/>
@@ -69,4 +69,4 @@
         </then>
     </if>
 
-</configuration>
+</included>
