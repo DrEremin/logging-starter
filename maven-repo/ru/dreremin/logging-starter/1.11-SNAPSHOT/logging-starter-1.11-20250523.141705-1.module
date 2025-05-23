@@ -3,7 +3,7 @@
   "component": {
     "group": "ru.dreremin",
     "module": "logging-starter",
-    "version": "1.10-SNAPSHOT",
+    "version": "1.11-SNAPSHOT",
     "attributes": {
       "org.gradle.status": "integration"
     }
@@ -25,13 +25,13 @@
       },
       "files": [
         {
-          "name": "logging-starter-1.10-SNAPSHOT.jar",
-          "url": "logging-starter-1.10-SNAPSHOT.jar",
-          "size": 23078,
-          "sha512": "87affe33c871bdcdb877c5a3ff222361bbe0b43aca4c3ec2e8b54a9fa1a3652e50e62ebbc373ca5b837e10d1463f605f68e874c6e255f66ff34913670f6354f4",
-          "sha256": "016a501495696ccacf3afd9630426c45a9b828ee043c32bd1d41a288d369113a",
-          "sha1": "40dad07fba7969cfbc9841a2c6cacec9aea44414",
-          "md5": "5605125338d8941b2dbff40c0c93323a"
+          "name": "logging-starter-1.11-SNAPSHOT.jar",
+          "url": "logging-starter-1.11-SNAPSHOT.jar",
+          "size": 23061,
+          "sha512": "1394b20054af47ddbd10cda886289eddf0dbc61da4c1b4d38b964aea9131b0baf8fcaee5d65c24938b273a995f03dca63836413af2dd1bb2155596fbbdefefb5",
+          "sha256": "3d912967858b9dec4126c44434b5fee526d45ea0fe0cda73b2a8c085937d510e",
+          "sha1": "05da2065717408aeb1cb4e742c9b7eaa3c92cfda",
+          "md5": "3253181ca296d15ee14a483aeb58aa44"
         }
       ]
     },
@@ -83,13 +83,13 @@
       ],
       "files": [
         {
-          "name": "logging-starter-1.10-SNAPSHOT.jar",
-          "url": "logging-starter-1.10-SNAPSHOT.jar",
-          "size": 23078,
-          "sha512": "87affe33c871bdcdb877c5a3ff222361bbe0b43aca4c3ec2e8b54a9fa1a3652e50e62ebbc373ca5b837e10d1463f605f68e874c6e255f66ff34913670f6354f4",
-          "sha256": "016a501495696ccacf3afd9630426c45a9b828ee043c32bd1d41a288d369113a",
-          "sha1": "40dad07fba7969cfbc9841a2c6cacec9aea44414",
-          "md5": "5605125338d8941b2dbff40c0c93323a"
+          "name": "logging-starter-1.11-SNAPSHOT.jar",
+          "url": "logging-starter-1.11-SNAPSHOT.jar",
+          "size": 23061,
+          "sha512": "1394b20054af47ddbd10cda886289eddf0dbc61da4c1b4d38b964aea9131b0baf8fcaee5d65c24938b273a995f03dca63836413af2dd1bb2155596fbbdefefb5",
+          "sha256": "3d912967858b9dec4126c44434b5fee526d45ea0fe0cda73b2a8c085937d510e",
+          "sha1": "05da2065717408aeb1cb4e742c9b7eaa3c92cfda",
+          "md5": "3253181ca296d15ee14a483aeb58aa44"
         }
       ]
     }

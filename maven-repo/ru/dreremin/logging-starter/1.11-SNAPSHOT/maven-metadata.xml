@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>ru.dreremin</groupId>
+  <artifactId>logging-starter</artifactId>
+  <versioning>
+    <lastUpdated>20250523141705</lastUpdated>
+    <snapshot>
+      <timestamp>20250523.141705</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>module</extension>
+        <value>1.11-20250523.141705-1</value>
+        <updated>20250523141705</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.11-20250523.141705-1</value>
+        <updated>20250523141705</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.11-20250523.141705-1</value>
+        <updated>20250523141705</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+  <version>1.11-SNAPSHOT</version>
+</metadata>
