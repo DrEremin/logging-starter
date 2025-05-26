@@ -3,7 +3,7 @@
   "component": {
     "group": "ru.dreremin",
     "module": "logging-starter",
-    "version": "1.11-SNAPSHOT",
+    "version": "1.12-SNAPSHOT",
     "attributes": {
       "org.gradle.status": "integration"
     }
@@ -25,13 +25,13 @@
       },
       "files": [
         {
-          "name": "logging-starter-1.11-SNAPSHOT.jar",
-          "url": "logging-starter-1.11-SNAPSHOT.jar",
+          "name": "logging-starter-1.12-SNAPSHOT.jar",
+          "url": "logging-starter-1.12-SNAPSHOT.jar",
           "size": 23115,
-          "sha512": "a202640813fce91f04f50c6372e1aa602ac8d9f14472853b63085d1415d34ca62c69da962399fc1f887fbf542ee56fded9f1fc1c7a77c0db4acfb171e563dcbb",
-          "sha256": "208af3388860f3c42bdc68457564debe4aef5020e3eb428b276d804e357eb564",
-          "sha1": "4c837f5bc4833e30eb47ec631826044162318d36",
-          "md5": "d138d0fea06bc4f71dce074140373850"
+          "sha512": "b654f9a323e775caf657b1fd8867175e7ab7ee40f1d851756e9b51338cb8333f018d3c626ab5e02fcb8fffd7e865c0a26ac64e44e7e2b9759b72070d6c7aa6f7",
+          "sha256": "eeffa7d2da5765f8cef35124492d71f85c0b4da6972c3df49ef5778686db1e86",
+          "sha1": "403d56d8c82150242426529151b9fc7d552f8d56",
+          "md5": "63aa1f55b605bd0280fdb926a9c50738"
         }
       ]
     },
@@ -79,17 +79,24 @@
           "version": {
             "requires": "3.1.12"
           }
+        },
+        {
+          "group": "net.logstash.logback",
+          "module": "logstash-logback-encoder",
+          "version": {
+            "requires": "8.0"
+          }
         }
       ],
       "files": [
         {
-          "name": "logging-starter-1.11-SNAPSHOT.jar",
-          "url": "logging-starter-1.11-SNAPSHOT.jar",
+          "name": "logging-starter-1.12-SNAPSHOT.jar",
+          "url": "logging-starter-1.12-SNAPSHOT.jar",
           "size": 23115,
-          "sha512": "a202640813fce91f04f50c6372e1aa602ac8d9f14472853b63085d1415d34ca62c69da962399fc1f887fbf542ee56fded9f1fc1c7a77c0db4acfb171e563dcbb",
-          "sha256": "208af3388860f3c42bdc68457564debe4aef5020e3eb428b276d804e357eb564",
-          "sha1": "4c837f5bc4833e30eb47ec631826044162318d36",
-          "md5": "d138d0fea06bc4f71dce074140373850"
+          "sha512": "b654f9a323e775caf657b1fd8867175e7ab7ee40f1d851756e9b51338cb8333f018d3c626ab5e02fcb8fffd7e865c0a26ac64e44e7e2b9759b72070d6c7aa6f7",
+          "sha256": "eeffa7d2da5765f8cef35124492d71f85c0b4da6972c3df49ef5778686db1e86",
+          "sha1": "403d56d8c82150242426529151b9fc7d552f8d56",
+          "md5": "63aa1f55b605bd0280fdb926a9c50738"
         }
       ]
     }

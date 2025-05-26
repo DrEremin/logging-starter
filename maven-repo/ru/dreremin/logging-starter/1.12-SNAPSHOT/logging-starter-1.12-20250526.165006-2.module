@@ -1,0 +1,104 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "ru.dreremin",
+    "module": "logging-starter",
+    "version": "1.12-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "logging-starter-1.12-SNAPSHOT.jar",
+          "url": "logging-starter-1.12-SNAPSHOT.jar",
+          "size": 23115,
+          "sha512": "b654f9a323e775caf657b1fd8867175e7ab7ee40f1d851756e9b51338cb8333f018d3c626ab5e02fcb8fffd7e865c0a26ac64e44e7e2b9759b72070d6c7aa6f7",
+          "sha256": "eeffa7d2da5765f8cef35124492d71f85c0b4da6972c3df49ef5778686db1e86",
+          "sha1": "403d56d8c82150242426529151b9fc7d552f8d56",
+          "md5": "63aa1f55b605bd0280fdb926a9c50738"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-web",
+          "version": {
+            "requires": "3.2.5"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-aop",
+          "version": {
+            "requires": "3.2.5"
+          }
+        },
+        {
+          "group": "org.springframework.cloud",
+          "module": "spring-cloud-starter-openfeign",
+          "version": {
+            "requires": "4.1.4"
+          }
+        },
+        {
+          "group": "com.jayway.jsonpath",
+          "module": "json-path",
+          "version": {
+            "requires": "2.9.0"
+          }
+        },
+        {
+          "group": "org.codehaus.janino",
+          "module": "janino",
+          "version": {
+            "requires": "3.1.12"
+          }
+        },
+        {
+          "group": "net.logstash.logback",
+          "module": "logstash-logback-encoder",
+          "version": {
+            "requires": "8.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "logging-starter-1.12-SNAPSHOT.jar",
+          "url": "logging-starter-1.12-SNAPSHOT.jar",
+          "size": 23115,
+          "sha512": "b654f9a323e775caf657b1fd8867175e7ab7ee40f1d851756e9b51338cb8333f018d3c626ab5e02fcb8fffd7e865c0a26ac64e44e7e2b9759b72070d6c7aa6f7",
+          "sha256": "eeffa7d2da5765f8cef35124492d71f85c0b4da6972c3df49ef5778686db1e86",
+          "sha1": "403d56d8c82150242426529151b9fc7d552f8d56",
+          "md5": "63aa1f55b605bd0280fdb926a9c50738"
+        }
+      ]
+    }
+  ]
+}
