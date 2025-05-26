@@ -27,11 +27,11 @@
         {
           "name": "logging-starter-1.11-SNAPSHOT.jar",
           "url": "logging-starter-1.11-SNAPSHOT.jar",
-          "size": 23061,
-          "sha512": "1394b20054af47ddbd10cda886289eddf0dbc61da4c1b4d38b964aea9131b0baf8fcaee5d65c24938b273a995f03dca63836413af2dd1bb2155596fbbdefefb5",
-          "sha256": "3d912967858b9dec4126c44434b5fee526d45ea0fe0cda73b2a8c085937d510e",
-          "sha1": "05da2065717408aeb1cb4e742c9b7eaa3c92cfda",
-          "md5": "3253181ca296d15ee14a483aeb58aa44"
+          "size": 23115,
+          "sha512": "a202640813fce91f04f50c6372e1aa602ac8d9f14472853b63085d1415d34ca62c69da962399fc1f887fbf542ee56fded9f1fc1c7a77c0db4acfb171e563dcbb",
+          "sha256": "208af3388860f3c42bdc68457564debe4aef5020e3eb428b276d804e357eb564",
+          "sha1": "4c837f5bc4833e30eb47ec631826044162318d36",
+          "md5": "d138d0fea06bc4f71dce074140373850"
         }
       ]
     },
@@ -85,11 +85,11 @@
         {
           "name": "logging-starter-1.11-SNAPSHOT.jar",
           "url": "logging-starter-1.11-SNAPSHOT.jar",
-          "size": 23061,
-          "sha512": "1394b20054af47ddbd10cda886289eddf0dbc61da4c1b4d38b964aea9131b0baf8fcaee5d65c24938b273a995f03dca63836413af2dd1bb2155596fbbdefefb5",
-          "sha256": "3d912967858b9dec4126c44434b5fee526d45ea0fe0cda73b2a8c085937d510e",
-          "sha1": "05da2065717408aeb1cb4e742c9b7eaa3c92cfda",
-          "md5": "3253181ca296d15ee14a483aeb58aa44"
+          "size": 23115,
+          "sha512": "a202640813fce91f04f50c6372e1aa602ac8d9f14472853b63085d1415d34ca62c69da962399fc1f887fbf542ee56fded9f1fc1c7a77c0db4acfb171e563dcbb",
+          "sha256": "208af3388860f3c42bdc68457564debe4aef5020e3eb428b276d804e357eb564",
+          "sha1": "4c837f5bc4833e30eb47ec631826044162318d36",
+          "md5": "d138d0fea06bc4f71dce074140373850"
         }
       ]
     }
